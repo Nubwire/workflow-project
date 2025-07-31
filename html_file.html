@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work Flow Launch Pad</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <main class="container">
+        <!-- Header Section -->
+        <div class="header-section">
+            <div class="header-bg"></div>
+            <div class="header-content">
+                <div class="badge">⚡ FREE Launch System</div>
+                <h1 class="main-title">Work Flow<br />Launch Pad</h1>
+                <p class="subtitle">Turn your skills into <span class="highlight">$1K-$10K/month</span> with our proven system</p>
+                
+                <!-- Social Proof Numbers -->
+                <div class="social-proof">
+                    <div class="proof-item">
+                        <div class="proof-number">12,847+</div>
+                        <div class="proof-label">Success Stories</div>
+                    </div>
+                    <div class="proof-item">
+                        <div class="proof-number">$2.3M+</div>
+                        <div class="proof-label">Revenue Generated</div>
+                    </div>
+                    <div class="proof-item">
+                        <div class="proof-number">89%</div>
+                        <div class="proof-label">Success Rate</div>
+                    </div>
+                </div>
+
+                <div class="features">
+                    <div class="feature">📈 Proven Strategies</div>
+                    <div class="feature">🎯 Market Insights</div>
+                    <div class="feature">💰 Revenue-Focused</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Input Form -->
+        <div class="form-card">
+            <div class="form-group">
+                <label>Monthly Revenue Target (USD)</label>
+                <input type="number" id="goal" value="1000" class="form-input">
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Category</label>
+                    <select id="category" class="form-select">
+                        <option>Digital Products</option>
+                        <option>Books</option>
+                        <option>Courses</option>
+                        <option selected>Printables</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Platform</label>
+                    <select id="platform" class="form-select">
+                        <option selected>Etsy</option>
+                        <option>Amazon KDP</option>
+                        <option>Gumroad</option>
+                        <option>Shopify</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label>Plan Duration</label>
+                <input type="number" id="days" value="5" max="5" class="form-input">
+                <p class="help-text">Free version: 5-day starter plan • Pro version: Complete 21-day system</p>
+            </div>
+            
+            <button id="generateBtn" class="generate-button">
+                🚀 Create My Free Launch System
+            </button>
+        </div>
+
+        <!-- Results Section (Hidden initially) -->
+        <div id="results" class="results-section" style="display: none;">
+            <!-- Testimonials -->
+            <div class="testimonials-card">
+                <h3>💬 What Our Community Says</h3>
+                <div class="testimonials-grid">
+                    <div class="testimonial">
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                        <p>"Made my first $500 in week 2 following this exact system!"</p>
+                        <div class="author">- Sarah M., Digital Products</div>
+                    </div>
+                    <div class="testimonial">
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                        <p>"Finally hit $3K/month with my Etsy printables shop!"</p>
+                        <div class="author">- Mike D., Printables</div>
+                    </div>
+                    <div class="testimonial">
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                        <p>"The step-by-step approach made everything so clear!"</p>
+                        <div class="author">- Lisa K., Courses</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Market Insights -->
+            <div class="insights-card">
+                <h3>📊 Market Opportunity Analysis</h3>
+                <div id="insights-grid" class="insights-grid">
+                    <!-- Will be populated by JavaScript -->
+                </div>
+            </div>
+
+            <!-- Action Plan -->
+            <div class="action-plan">
+                <div class="plan-header">
+                    <h2>🎯 Your Free Work Flow Launch System</h2>
+                    <button id="downloadBtn" class="download-button">
+                        📥 Download PDF
+                    </button>
+                </div>
+                
+                <div id="plan-content" class="plan-content">
+                    <!-- Will be populated by JavaScript -->
+                </div>
+            </div>
+
+            <!-- Email Signup -->
+            <div class="email-card">
+                <h3>📧 Join 25,000+ Entrepreneurs</h3>
+                <p>Get weekly tips, success stories, and new strategies delivered to your inbox</p>
+                <div class="email-form">
+                    <input type="email" id="email" placeholder="Enter your email address" class="email-input">
+                    <button id="emailBtn" class="email-button">Join Free</button>
+                </div>
+                <p class="privacy-text">No spam, unsubscribe anytime. We respect your privacy.</p>
+            </div>
+
+            <!-- Upgrade CTA -->
+            <div class="upgrade-card">
+                <div class="upgrade-badge">🔥 Limited Time Offer</div>
+                <h3>Ready to unlock your full potential?</h3>
+                <p>Join thousands who've transformed their income with our complete Pro system</p>
+                
+                <div class="upgrade-stats">
+                    <div class="upgrade-stat">
+                        <div class="stat-number">21 Days</div>
+                        <div class="stat-label">Complete System</div>
+                    </div>
+                    <div class="upgrade-stat">
+                        <div class="stat-number">150+ Tasks</div>
+                        <div class="stat-label">Action Items</div>
+                    </div>
+                    <div class="upgrade-stat">
+                        <div class="stat-number">Templates</div>
+                        <div class="stat-label">Ready-to-use</div>
+                    </div>
+                    <div class="upgrade-stat">
+                        <div class="stat-number">$2.3M+</div>
+                        <div class="stat-label">Generated</div>
+                    </div>
+                </div>
+                
+                <div class="pricing">
+                    <span class="old-price">$47</span>
+                    <span class="new-price">$9</span>
+                    <span class="price-label">Launch Special</span>
+                </div>
+                
+                <a href="https://payhip.com/easyworkflows" target="_blank" class="upgrade-button">
+                    🔓 Get Pro Launch System Now
+                </a>
+                
+                <div class="guarantees">
+                    <div class="guarantee">✓ 30-day guarantee</div>
+                    <div class="guarantee">✓ Instant download</div>
+                    <div class="guarantee">✓ 12,847+ success stories</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Default Message -->
+        <div id="defaultMessage" class="default-message">
+            <p>Select your target and platform above to generate your personalized action plan</p>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <p>© 2024 Work Flow Launch Pad. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="mailto:hello@workflowlaunchpad.com">Support</a>
+                    <span>•</span>
+                    <a href="#">Privacy Policy</a>
+                    <span>•</span>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+            <div class="beta-notice">
+                <p>This is a BETA version. We're constantly improving based on user feedback!</p>
+            </div>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
